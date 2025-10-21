@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jamile Sales — Portfólio</title>
+  <meta name="description" content="Portfólio de Jamile de Jesus Sales — Estagiária Back-End | Java, Spring Boot, TypeScript, React, Ruby">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="theme-dark">
+  <!-- Menu fixo no topo -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#sobre">Jamile Sales</a>
+      <nav class="nav" id="main-nav">
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="controls">
+        <button id="theme-toggle" aria-label="Alternar tema">🌓</button>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sobre mim -->
+    <section id="sobre" class="section container">
+      <h1>Jamile de Jesus Sales</h1>
+      <p class="subtitle">Estagiária de Back-End na equipe de Engenharia do PagBank</p>
+
+      <div class="card">
+        <h2>Apresentação</h2>
+        <p>
+          Sou estagiária de Back-End na equipe de Engenharia do PagBank, atuando no desenvolvimento e evolução de serviços e sistemas com foco em eficiência, escalabilidade e qualidade de código. Trabalho com Java, Spring Boot, TypeScript, React e Ruby, colaborando com equipes multidisciplinares para entregar soluções que geram valor direto para o cliente.
+        </p>
+        <p>Entre minhas principais contribuições estão:</p>
+        <ul>
+          <li>Criação de uma tela para otimizar um processo crítico, antes restrito à madrugada, tornando-o acessível em qualquer horário.</li>
+          <li>Liderança em iniciativas de segurança, coordenando a resolução de vulnerabilidades sem comprometer entregas estratégicas.</li>
+          <li>Atuação em sustentação, análise de logs e solução de problemas em produção.</li>
+          <li>Condução de refinamentos para garantir clareza de requisitos.</li>
+          <li>Foco em qualidade de código e entendimento do objetivo de negócio.</li>
+        </ul>
+
+        <p>📚 Concluindo Análise e Desenvolvimento de Sistemas (UNIFAEL) — conclusão este ano. Cursando Engenharia de Software (UNINTER) — prevista para 2028. Próximo passo: desenvolvedora Júnior com foco em arquitetura e microsserviços.</p>
+
+        <p><strong>Interesses:</strong> dev backend | fullstack</p>
+      </div>
+
+      <div class="links-row">
+        <a class="btn" href="https://www.linkedin.com/in/jamilesales21/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/JamileSales127" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <!-- Formação -->
+    <section id="formacao" class="section container">
+      <h2>Formação</h2>
+      <div class="card">
+        <h3>Análise e Desenvolvimento de Sistemas — UNIFAEL</h3>
+        <p>Conclusão: este ano.</p>
+
+        <h3>Engenharia de Software — UNINTER</h3>
+        <p>Previsão de conclusão: 2028.</p>
+
+        <h3>Idiomas</h3>
+        <ul>
+          <li>Português — Nativo</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio" class="section container">
+      <h2>Portfólio</h2>
+      <div class="card grid-projects">
+        <!-- Projeto 1 -->
+        <article class="project">
+          <h4>Cardápio Restaurante</h4>
+          <p>Projeto backend/REST com rotas para gestão de cardápio.</p>
+          <a href="https://github.com/JamileSales127/cardapio-restaurante" target="_blank" rel="noopener">Ver no GitHub</a>
+        </article>
+
+        <!-- Projeto 2 -->
+        <article class="project">
+          <h4>Jogo do Número Secreto</h4>
+          <p>Projeto JavaScript com lógica do jogo e interação no front.</p>
+          <a href="https://github.com/JamileSales127/jogo-do-numero-secreto" target="_blank" rel="noopener">Ver no GitHub</a>
+        </article>
+      </div>
+
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section container">
+      <h2>Contato</h2>
+
+      <div class="card contact-grid">
+        <div>
+          <p><strong>Telefone:</strong> 75 98330-2772</p>
+          <p><strong>E-mail:</strong> <a href="mailto:jamilesales083@gmail.com">jamilesales083@gmail.com</a></p>
+          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/jamilesales21/" target="_blank" rel="noopener">/jamilesales21</a></p>
+        </div>
+
+        <form id="contact-form" novalidate>
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required>
+
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit" class="btn primary">Enviar mensagem</button>
+        </form>
+      </div>
+
+      <!-- Modal de confirmação (inicialmente oculto) -->
+      <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+          <button id="modal-close" class="modal-close" aria-label="Fechar">✕</button>
+          <h3>Mensagem enviada com sucesso!</h3>
+          <p>Obrigado pelo contato — responderemos em breve.</p>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Jamile de Jesus Sales — Portfólio</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

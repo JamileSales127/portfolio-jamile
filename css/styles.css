@@ -1,0 +1,97 @@
+/* styles.css
+   Código CSS puro, sem frameworks.
+   Tema padrão: escuro. Tema claro ativado via classe .theme-light no body.
+*/
+:root{
+  --bg:#0b0b0d;
+  --surface:#111214;
+  --muted:#9aa3b2;
+  --text:#e6eef8;
+  --accent1:#6c5ce7; /* roxo */
+  --accent2:#3b82f6; /* azul */
+  --glass: rgba(255,255,255,0.03);
+}
+
+body.theme-light{
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+  --muted:#556070;
+  --text:#0b1220;
+  --accent1:#6c5ce7;
+  --accent2:#3b82f6;
+  --glass: rgba(11,18,32,0.03);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(108,92,231,0.08), transparent), radial-gradient(800px 400px at 90% 90%, rgba(59,130,246,0.06), transparent), var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+.container{max-width:1000px;margin:0 auto;padding:2rem}
+
+.site-header{position:sticky;top:0;background:linear-gradient(180deg, rgba(0,0,0,0.4), transparent);backdrop-filter:blur(4px);z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.8rem 1rem}
+.brand{font-weight:700;text-decoration:none;color:var(--text);font-size:1.1rem}
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--text);text-decoration:none;padding:0.5rem;border-radius:6px}
+.nav a:hover{background:var(--glass)}
+.controls{display:flex;gap:0.5rem;align-items:center}
+.menu-toggle{display:none}
+
+.section{padding:3rem 0}
+.subtitle{opacity:0.9}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:1.2rem;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+.links-row{margin-top:1rem;display:flex;gap:0.6rem}
+.btn{display:inline-block;padding:0.5rem 0.9rem;border-radius:8px;text-decoration:none;background:transparent;border:1px solid rgba(255,255,255,0.06)}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:white;border:none}
+.small{opacity:0.85;font-size:0.9rem}
+
+.grid-projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.project{padding:0.8rem;background:rgba(255,255,255,0.02);border-radius:10px}
+.project a{display:inline-block;margin-top:0.6rem}
+
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start}
+/* Desktop: menu sempre visível */
+@media(min-width:801px){
+  .nav{display:flex !important}
+  .menu-toggle{display:none !important}
+}
+
+/* Mobile: menu controlado por JavaScript */
+@media(max-width:800px){
+  .site-header{position:relative}
+  .nav{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--surface);
+    padding:1rem;
+    border-radius:0 0 8px 8px;
+    box-shadow:0 4px 12px rgba(2,6,23,0.4);
+  }
+  .menu-toggle{display:inline-block;border:none;background:transparent;color:var(--text);font-size:1.2rem;cursor:pointer}
+  .contact-grid{grid-template-columns:1fr}
+}
+
+/* Modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(2,6,23,0.6);visibility:hidden;opacity:0;transition:opacity .2s,visibility .2s}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{background:var(--surface);padding:1.2rem;border-radius:12px;max-width:420px;min-width:260px;position:relative}
+.modal-close{position:absolute;right:8px;top:8px;border:none;background:transparent;color:var(--muted);font-size:1rem}
+
+.site-footer{padding:1.2rem 0;text-align:center;color:var(--muted)}
+
+/* Small improvements */
+input,textarea{width:100%;padding:0.6rem;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);margin-bottom:0.6rem}
+label{display:block;margin-bottom:0.2rem;font-size:0.9rem}
+
+/* Smooth scroll for anchor links */
+html{scroll-behavior:smooth}
